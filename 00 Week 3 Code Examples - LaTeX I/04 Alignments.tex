@@ -1,0 +1,38 @@
+\documentclass[11pt, a4paper]{article} 
+% Only fontsize 10-12pt is applicable for article
+\usepackage{comment} 
+\usepackage{enumitem} %Required for chaging types of bullets
+
+\usepackage{indentfirst}
+\setlength\parindent{24pt}
+
+\usepackage{blindtext} % Required to add text for the example of alignments
+\usepackage{ragged2e} % Alignments
+
+\title{My First \LaTeX\ Document}
+\author{Enter an author’s name here} %Replace your name here
+\date{April 2023}
+% Main Document ---
+\begin{document}
+	\maketitle
+	% Alignments
+	\setcounter{section}{2} %To start this section with 3
+	\section{Text Alignment using standard \LaTeX{} command and "ragged2e" package}
+	\subsection{Right-aligned example with \texttt{\string\raggedright}\\ (standard \LaTeX{} command)}
+	% --- 
+	\begin{flushleft} %competible with \begin{raggedright}
+			\noindent
+			\blindtext[1]\par
+	\end{flushleft}   %competible with \end{raggedright}
+	% --- Alternative
+	%\raggedright\blindtext[1]\par 	%Not recommended as it affects the rest of the document  
+	
+	\subsection{Right-aligned example with \texttt{\string\RaggedRight}\\(ragged2e package)}
+	% ---
+	\begin{FlushLeft} %competible with \begin{RaggedRight}
+			\noindent
+			\blindtext[1]\par
+	\end{FlushLeft} %competible with \end{RaggedRight}
+	% --- Alternative
+	%\RaggedRight\blindtext[1]\par
+\end{document}

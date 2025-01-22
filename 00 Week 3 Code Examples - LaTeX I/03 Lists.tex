@@ -1,0 +1,84 @@
+\documentclass[11pt, a4paper]{article} 
+% Only fontsize 10-12pt is applicable for article
+\usepackage{comment} %require if you want to make a block comment
+
+\usepackage{indentfirst} %Automatically add an indent at the first line
+\setlength\parindent{24pt}
+
+\usepackage{enumitem} %required to change numbering types in ordered lists
+
+\title{My First \LaTeX\ Document}
+\author{Enter an author’s name here} %Replace your name here
+\date{April 2023}
+\begin{document}
+	\maketitle
+	\setcounter{section}{1} %To start this section with 2
+	\section{Lists}
+	\subsection{Unordered Lists}
+	\subsubsection{Unordered Lists with a default dot bullet ($\cdot$) }
+	\begin{itemize}  
+		\item First item (with a default black-dot bullet) 
+		\item Second item of any length
+		\item Third item
+	\end{itemize}
+
+	\subsubsection{Unordered Lists with a customized bullet}
+	\begin{itemize}	%Unordered lists
+		%Add "\item" to make the unorderlist with bullet
+		\item[-]\textbf{BOLD}
+		\item[-]\textit{ITALIC}
+		\item[-]\underline{UNDERLINE}
+	\end{itemize}
+	
+	\subsection{Ordered Lists}
+	\subsubsection{Ordered Lists with default numbering (1., 2., 3., ...)}
+	\begin{enumerate}
+		\item First item
+		\item Second item $($The list numbers increase automatically$)$
+	\end{enumerate}
+
+	\subsubsection{Ordered Lists with customized numbering}
+	\begin{enumerate}[label=(\roman*)]
+		\item One
+		\item Two
+		\item Three
+	\end{enumerate}
+	\begin{enumerate}[label=\arabic*)]
+		\item One
+		\item Two
+		\item Three
+	\end{enumerate}
+	\begin{enumerate}[label=(\alph*)]
+		\item One
+		\item Two
+		\item Three
+	\end{enumerate}
+
+	% Nested Lists ---
+	\subsection{Nested Lists}
+	\subsubsection{Nested Lists by default with alphabet in suborders 
+		(a),(b),(c),...}
+	\begin{enumerate}
+		\item One
+		\item Two
+		\begin{enumerate}
+			\item Sub-item a
+			\item Sub-item b
+		\end{enumerate}
+		\item Third item
+	\end{enumerate}
+
+	\subsubsection{Nested Lists by default with numbering in suborders
+		 N.1,N.2,N.3,...}
+	\begin{enumerate}
+		\item One
+		\item Two
+		\begin{enumerate}[label*=\arabic*.]%\addtocounter{enumi}{XX} not start at 1
+			\item Sub-item Two point One
+			\item Sub-item Two point Two
+		\end{enumerate}
+		\item Third item
+	\end{enumerate}
+
+
+\end{document}

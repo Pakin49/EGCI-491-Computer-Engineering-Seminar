@@ -1,0 +1,69 @@
+\documentclass[11pt, a4paper]{article} 
+% Only fontsize 10-12pt is applicable for article
+\usepackage{comment} 
+\usepackage{enumitem} %Requires to chage types of numbering/bullets
+\usepackage{indentfirst} %Automatically ad an indent at the first line
+\setlength\parindent{24pt}
+\usepackage{blindtext} %To add text as an example for alignments
+\usepackage{ragged2e} %Alignments
+
+% Package for inserting figures
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{{Figures/}}
+
+\usepackage{subcaption} %required for subfigures
+
+% If you want to add any prefix befor numbering in List of Figure
+\usepackage{tocloft}
+\renewcommand{\cftfigpresnum}{Figure }
+\setlength{\cftfignumwidth}{3.7em}
+
+% Add details for your title and author(s)
+\title{My First \LaTeX\ Document}
+\author{Enter an author’s name here} %Replace your name here
+\date{\today}
+
+\begin{document}
+	\maketitle
+	% Add figures
+	\setcounter{section}{3} %To start this section with 4
+	\section{Adding a figure} 
+	% Use \includegraphcs command to insert images
+	\begin{figure}[!h]
+		\noindent
+		\Centering
+		\includegraphics[width=0.25\textwidth]{MU_LOGO_Color}\\
+		\caption{Mahidol University.}
+		\label{fig:MU Logo}
+		%\"textwidth, \columnwidth": 
+		%\"linewidth": space varies by local environment (e.g., under lists)
+	\end{figure}
+	%justified is used as a defult alignment
+	\noindent\textbf{Mahidol University International College}
+	(\textbf{MUIC}) is Thailand's first public international college. It is part of Mahidol University and is located on the university's Salaya Campus in Nakhon Pathom Province.\\
+	MU Logo is shown in figure~\ref{fig:MU Logo}.
+
+	\pagebreak
+	\section{Subfigures} 
+	\begin{figure}[!h]
+		\centering
+		\begin{subfigure}[b]{0.35\linewidth}
+			\includegraphics[width=\linewidth]{MU_LOGO_Color}
+			\caption{}
+		\end{subfigure}
+		\hspace{1em}% Space between image A and B
+		\begin{subfigure}[b]{0.35\linewidth}
+			\includegraphics[width=\linewidth]{MU_LOGO_BW}
+			\caption{}
+		\end{subfigure}
+		\caption{MU Logo (a) Color (b) Black\&White}
+		\label{fig:MU_Logo}
+	\end{figure}
+	
+	\pagebreak
+	\tableofcontents
+	\pagebreak
+	\listoffigures
+	
+	
+\end{document}

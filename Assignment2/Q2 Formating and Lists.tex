@@ -14,6 +14,7 @@
 \usepackage{graphicx}
 \graphicspath{{Figures/}}
 \usepackage{ragged2e}
+\usepackage{subcaption}
 %------------------------------------------------------------------------
 \usepackage{fontspec}
 %Either Xelatex or Lualatex is required as a default complier
@@ -79,6 +80,7 @@
 		\item Expected Result 2
 		\item Expected Result 3
 	\end{enumerate}
+	\newpage
 	\section{Timeline}
 		\begin{figure}[!h]
 			\noindent\Centering
@@ -88,11 +90,28 @@
 		\end{figure}
 			
 	\section{Subplot}
-		\begin{figure}[!h]
-			\noindent\Centering
-			\includegraphics[width=0.35\textwidth]{a}
-			\caption{a}
-			\label{fig:A}
+		\begin{figure}[h!]
+			\centering
+			\begin{subfigure}[b]{0.35\linewidth}
+				\Centering
+				\fbox{\includegraphics[width=\linewidth]{A}}
+				\caption{}
+			\end{subfigure}
+			\hspace{1em} % Space between image 
+			\begin{subfigure}[b]{0.35\linewidth}
+				\fbox{\includegraphics[width=\linewidth]{B}}
+				\caption{}
+			\end{subfigure}
+			\hspace{1em} % Space between image 
+			\begin{subfigure}[b]{0.35\linewidth}
+				\fbox{\includegraphics[width=\linewidth]{C}}
+				\caption{}
+			\end{subfigure}
+			\hspace{1em} % Space between image 	
+			\begin{subfigure}[b]{0.35\linewidth}
+				\fbox{\includegraphics[width=\linewidth]{D}}
+				\caption{}
+			\end{subfigure}		
 		\end{figure}
 \end{document}
 %========================================================================

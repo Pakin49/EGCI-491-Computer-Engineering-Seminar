@@ -1,0 +1,59 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Preamble ---
+\usepackage[margin=1.5in]{geometry} %To adjust margins
+\usepackage{xcolor} %For text in colors
+\usepackage{ragged2e} 
+
+%\usepackage{arrayjob}
+%\newarray\bibstyles
+%\readarray{bibstyles}{unsrtnat&abbrvnat&dinat&plainnat&rusnat&ksfh_nat}
+
+
+\usepackage{natbib}
+%\usepackage[square,numbers,sort]{natbib}
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{abbrvnat}
+%\bibliographystyle{plainnat.bst}
+
+%To declare a document title and an author(s) 
+\title{My First \LaTeX\ Document}
+\author{Enter an author’s name here} %Replace your name here
+\date{\today}
+
+\begin{document}
+	\bibliographystyle{plainnat.bst}
+	%\maketitle
+	
+	\setcounter{section}{7} %To start this section with 5
+	\section{Bibliography using \color{blue}\texttt{natbib}}
+	This followings are examples of using \textbf{\texttt{natbib}} package for bibliography management. %There are xxx items cited:
+	
+	\begin{itemize}
+		\item Use the command \verb|\cite{ReferenceKey}| to cite an entry showing only reference number such as \cite{PTDP2022}
+		
+		\item  Use the command \verb|\citet{ReferenceKey}| to show the first author's name and reference number such as \citet{PTDP2022}
+		
+		\item  Use the command \verb|\citet*{ReferenceKey}| to cite an entry with all authors' name such as \citet*{PTDP2022}
+		
+		\item  Use the command \verb|\citep{ReferenceKey}| to show the first author's name and reference number such as \citep{PTDP2022}
+		
+		\item  Use the command \verb|\citep*{ReferenceKey}| to cite an entry with all authors' name such as \citep*{PTDP2022}
+		
+		\item  Use the command \verb|\citeauthor{ReferenceKey}| to show the first author's name and reference number such as \citeauthor{PTDP2022}
+		
+		\item  Use the command \verb|\citeyear{ReferenceKey}| to cite an entry with all authors' name such as \citeyear{PTDP2022}
+	\end{itemize}
+	
+	To cite multiple items such as I) an article \cite{PTDP2022}, II) a \LaTeX\ book \cite{latexcookbook}, and III) Overleaf \LaTeX\ Tutorial website \cite{overleaf}, you can simply cite them at the same time in the curly brackets/braces as follow:
+	\begin{equation}
+		\verb|\cite{ReferenceKey1, ReferenceKey2,...}|
+	\end{equation}
+	\indent For example, using  \verb*|\cite{PTDP2022,latexcookbook,overleaf}| to cite three items will show the citation as \cite{PTDP2022, latexcookbook, overleaf}
+	
+	\newpage
+	\medskip
+	
+	\bibliography{References}
+	
+\end{document}

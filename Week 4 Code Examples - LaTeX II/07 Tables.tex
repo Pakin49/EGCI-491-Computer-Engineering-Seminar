@@ -1,0 +1,92 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Preamble ---
+\usepackage[margin=1.5in]{geometry} %To adjust margins
+\usepackage{tabularray}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%\newcommand{\otoprule }{\midrule[\heavyrulewidth]}
+
+%\usepackage{caption} 
+%\captionsetup[table]{skip=2pt} %To increase space between a table and its caption
+
+\begin{document}
+	\setcounter{section}{6} %To start this section with 7
+	\section{Tables}
+	Table \ref{table:t_basic1} and Table \ref{table:t_basic2} shows how to add a basic table and its caption by using built-in commands \textbf{\textbackslash begin\{table\}...\textbackslash end\{table\}}. Table \ref{table:t_tabularray} demonstrates how to create a more complicated table and its caption by using \textbf{tabularray} package
+	
+	\subsection{A Basic Table }
+	%Use buil-in environemnt table and tabular to create tables
+	\begin{table}[h!]
+		% To place a caption above a table
+		\centering
+		\caption{A) Add a caption above the table here.}
+		\begin{tabular}	{| c | c | c | c |} 
+			\hline
+			Col1 & Col2 & Col3 	& Col4	\\
+			\hline
+			R1 	 & 12 	& 13 	& 14 	\\ 
+			R2 	 & 22 	& 23 	& 24 	\\
+			R3 	 & 32 	& 33 	& 34 	\\
+			\hline
+		\end{tabular}
+		%\caption{B) Uncomment to add a caption below the table here.}
+		\label{table:t_basic1}
+	\end{table}
+	
+	\subsection{Table Adjustments}
+	\vspace{-0.9em} %To decrease vertical space after section title  
+	%Use buil-in environemnt table and tabular to create tables
+	\begin{table}[h!]
+		\centering
+		% To place a caption above a table
+		\caption{A basic table with some adjustments.}
+		\vspace{0.5em} %Add space below the caption
+		\begin{tabular}	{| c | c  c | c |} 
+			\hline
+							 &		&		&	 	\\[-0.9em] % To add blank space
+						Col1 & Col2 & Col3 	& Col4	\\[0.1em]
+			\hline
+			\hline
+							 &		&		&	 	\\[-0.9em]	% To add blank space
+						  R1 & 12 	& 13 	& 14 	\\ 
+						  R2 & 22 	& 23 	& 24 	\\
+						  R3 & 32 	& 33 	& 34 	\\[0.1em] 
+			\hline
+		\end{tabular}
+		%\caption{Caption below: Table to test captions and labels.}
+		\label{table:t_basic2}
+	\end{table}
+	
+	\subsection{Inserting a Table using "tabularray" Package}
+	\vspace{-0.9em} %Reduce vertical space after section title 
+	%Using package "tabularray" to creat tables
+	\begin{table}[ht] %[ht]-> Put the table here at the top of the next page if it happens 
+		\footnotesize %Define font size in the table
+		\centering
+		\caption{A table created by using "tabularray" package}
+		\vspace{0.7em} % Add extra space below the caption
+		\label{table:t_tabularray}
+		\begin{tblr}{
+				%colspec = {*{4}{X}}, %Uncomment to increase col width
+				cells={halign=c},
+				vlines,
+				%hlines,
+				stretch=1.4
+			}
+
+			\hline
+			\SetCell[r=2]{} Col1	&\SetCell[c=2]{}Merged Col2-3	&& \SetCell[r=2]{} Col4\\
+			\hline
+									&Col2			&Col3 			&  		\\
+			\hline\hline
+								R1	&12				&13				& 14 	\\ 
+								R2	&22				&23				& 24 	\\
+								R3	&32				&33				& 34 	\\ 
+			\hline
+		\end{tblr}
+	\end{table}
+	
+	\pagebreak
+	\listoftables
+\end{document}

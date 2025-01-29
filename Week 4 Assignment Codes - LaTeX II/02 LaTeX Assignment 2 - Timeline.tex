@@ -1,0 +1,100 @@
+\documentclass[a4paper]{article} %Always requireed
+%========================================================================
+% preamble to declare kackges used in the document
+%========================================================================
+%Packages that will be used
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+
+%Define new command used for "tabularx" package
+\newcolumntype{Y}{>{\centering\arraybackslash}X} %Define new column type (Centering with textwidth)
+\renewcommand{\arraystretch}{1.4} %Increase the table height
+%Set up caption formatting/alignment
+\usepackage{caption}
+\captionsetup {	
+	%justification   = centering 
+	justification   = raggedright,
+	singlelinecheck = false
+}
+%\renewcommand{\arraystretch}{1.4}
+%To use a block comment in a document
+\usepackage{comment} 
+\begin{comment}
+	Test a block comment 
+\end{comment}
+%------------------------------------------------------------------------
+\usepackage{fontspec}
+%Either Xelatex or Lualatex is required as a default complier
+%To learn more about "fontspec" package: https://ctan.org/pkg/fontspec?lang=en 
+%========================================================================
+%To declare a document title and an author(s) 
+\title{EGCI491 Computer Engineering Seminar\\ \LaTeX\quad Assignment II}
+\author{Firstname Lastname}
+
+\begin{comment}
+	\author{
+		LastName1, FirstName1\\
+		\texttt{first1.last1@xxxxx.com} 
+		\and
+		LastName2, FirstName2\\
+		\texttt{first2.last2@xxxxx.com}
+		\and
+		LastName3, FirstName3\\
+		\texttt{first3.last3@xxxxx.com}
+		\and
+		LastName4, FirstName4\\
+		\texttt{first4.last4@xxxxx.com}
+	}
+\end{comment}
+%document
+\begin{document}
+	\maketitle
+	%Put your text in a body of your document here... 
+	
+	\section{Timeline}
+	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}	
+	\begin{table}[!ht]
+		\footnotesize
+		\sloppy
+		\centering
+		\caption{Project Timeline}
+		\label{tab: your-table} %for cross-reference
+		\begin{tabular}{|p{2.15cm}|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			\multicolumn{1}{|c|}{}& \multicolumn{12}{c|}{\textbf{Timeline}} \\ \cline{2-13} 
+			\multicolumn{1}{|c|}{}& \multicolumn{12}{c|}{\textbf{2025}} \\ \cline{2-13} 
+			\multicolumn{1}{|c|}{\multirow{-3}{2cm}{\textbf{Plan}}} & \textbf{Jan} & \textbf{Feb} & \textbf{March} & \textbf{April} & \textbf{May} & \textbf{Jun} & \textbf{July} & \textbf{Aug} & \textbf{Nov} & \textbf{Oct} & \textbf{Nov} & \textbf{Dec} \\ \hline
+			1: Study PQA & 
+			\cellcolor[HTML]{000000} &
+			\cellcolor[HTML]{000000}  & & & & & & & & & & \\ \hline
+			2: Study FPGA & & &
+			\cellcolor[HTML]{000000} & 
+			\cellcolor[HTML]{000000} & & & & & & & &\\ \hline
+			3: Chapter1 & & & &
+			\cellcolor[HTML]{000000} &
+			& & & & & & & \\ \hline
+			4: Chapter2 & & & & & 
+			\cellcolor[HTML]{000000} & & & & & & &\\ \hline
+			5: Chapter3 & & & & & &
+			\cellcolor[HTML]{000000} &
+			\cellcolor[HTML]{000000} & & & & & \\ \hline
+			6: Testing & & &  & & & & &  
+			\cellcolor[HTML]{000000} & 
+			\cellcolor[HTML]{000000} &
+			\cellcolor[HTML]{000000} &
+			\cellcolor[HTML]{000000} &\\ \hline
+			7: Chapter4 & & & & & & & & & & 
+			\cellcolor[HTML]{000000} & 
+			\cellcolor[HTML]{000000} & \\ \hline
+			8: Chapter5 & & & & & & & & & & & & 
+			\cellcolor[HTML]{000000} \\ \hline
+			9: Project Presentation& & & & & & & & & & & & 
+			\cellcolor[HTML]{000000} \\ \hline
+		\end{tabular}
+	\end{table}
+\end{document}
+%========================================================================

@@ -1,0 +1,63 @@
+\documentclass[a4paper, 12pt]{article} %Always requireed, either Xelatex or Lualatex is required as a default complier
+%======================================================
+% preamble to declare kackges used in the document
+%------------------------------------------------------
+\usepackage[margin=1.5in]{geometry} %To adjust margins
+\usepackage{comment} 	%To use a block comment in a document
+%\usepackage{fontspec} 	%To learn more about "fontspec" package: https://ctan.org/pkg/fontspec?lang=en 
+%---
+\usepackage{amsmath} 	% Required to use the equation* environment
+
+%To declare a document title and an author(s) 
+\title{My First \LaTeX\ Document}
+\author{Enter an author’s name here} %Replace your name here
+\date{\today}
+
+%======================================================
+%document
+\begin{document}
+	\maketitle
+	
+	\setcounter{section}{6} %To start this section with 5
+	\section{Mathematical Equations }
+	\subsection{An Inline Formula}
+	\noindent
+	This is an example of the inline-formula typesetting $f(x) = x^2$ which is equivalent to \(f(x) = x^2\) and also to
+	\begin{math}
+		f(x) = x^2
+	\end{math}.
+	
+	\subsection{A New-line Formulas without Number}
+	This is a simple formula without numbering in a new line:\[f^2(x) = ax^2+bx+c\] which is equivalent to 
+	\begin{displaymath} % a new-lne fomular without numbering
+		f_{i=1}^{n}(x) = 2x_i^2+1
+	\end{displaymath}
+	% You can also use $$y = ax+b$$ (but not recommend as you may occasionally observe inconsistent vertical spacing
+	
+	\subsection{Multiple Lines of Formulas without Number and Alignment}
+	The following is how to typeset multiple lines of formulas without number and alignment:
+	\begin{align*} 
+		ax^3+bx^2+c = 4y\\
+		y = ax^3+bx^2+c \\
+		3x+4 = 2y
+	\end{align*}
+
+	\subsection{Multiple Lines of Formulas without Number, but Alignment}
+	The following is how to typeset multiple lines of formulas without number, but alignment:
+	\begin{align*} 
+		ax^3+bx^2+c &= 4y\\
+		y &= ax^3+bx^2+c \\
+		3x+4 &= 2y
+	\end{align*}
+	
+	\subsection{Multiple Lines of Formulas with Number}
+	The following is how to typeset multiple lines of formulas with number:
+	\begin{align} %Typseting for multipl lines of wuations with numbering
+		\begin{split} %Separate equations but count as one number
+			ax^3+bx^2+c &= 4y\\
+			&\quad +(2y^2+d)
+		\end{split}\\
+		y &= ax^3+bx^2+c\\
+		3x+4 &= 2y
+	\end{align}
+\end{document}

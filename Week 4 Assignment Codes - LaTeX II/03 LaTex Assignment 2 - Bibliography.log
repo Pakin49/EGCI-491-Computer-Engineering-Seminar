@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.1.22)  2 FEB 2025 12:29
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.1.15)  2 FEB 2025 18:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -170,43 +170,69 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 ]
-Overfull \hbox (6.83856pt too wide) in paragraph at lines 37--37
-[] \TU/lmr/bx/n/17.28 FPGA Accelerated Post-Quantum Cryp-
- []
-
-
-Overfull \hbox (3.13284pt too wide) in paragraph at lines 42--43
-[]\TU/lmr/m/n/12 Experimental evaluations of FPGA-based PQC implementations dem
-on-
- []
-
-[1
-
-] [2]
-Overfull \hbox (4.54695pt too wide) in paragraph at lines 50--51
+Overfull \hbox (4.54695pt too wide) in paragraph at lines 40--41
 \TU/lmr/m/n/12 ciency and lower area overhead, making them suitable for energy-
 constrained
  []
 
+[1
 
-Overfull \hbox (17.23097pt too wide) in paragraph at lines 54--55
+]
+Overfull \hbox (17.23097pt too wide) in paragraph at lines 44--45
 []\TU/lmr/m/n/12 In conclusion, this study provides a comprehensive comparison 
 of hardware-
  []
 
-[3] (03 LaTex Assignment 2 - Bibliography.bbl
-Underfull \hbox (badness 1603) in paragraph at lines 15--20
+
+Overfull \hbox (6.83856pt too wide) in paragraph at lines 46--46
+[] \TU/lmr/bx/n/17.28 FPGA Accelerated Post-Quantum Cryp-
+ []
+
+
+Overfull \hbox (3.13284pt too wide) in paragraph at lines 51--52
+[]\TU/lmr/m/n/12 Experimental evaluations of FPGA-based PQC implementations dem
+on-
+ []
+
+
+Overfull \hbox (3.6266pt too wide) in paragraph at lines 55--55
+[]\TU/lmr/bx/n/17.28 Post-quantum cryptography Algorithm’s
+ []
+
+[2]
+Overfull \hbox (14.82407pt too wide) in paragraph at lines 66--66
+[]\TU/lmr/bx/n/17.28 Efficient and Scalable FPGA-Oriented De-
+ []
+
+
+Overfull \hbox (13.8391pt too wide) in paragraph at lines 68--68
+\TU/lmr/bx/n/17.28 mial ring processor for CRYSTALS-Kyber
+ []
+
+[3] [4] (03 LaTex Assignment 2 - Bibliography.bbl
+Underfull \hbox (badness 3179) in paragraph at lines 9--13
+[]\TU/lmr/m/n/12 Kanad Basu, Deepraj Soni, Mohammed Nabeel, and Ramesh
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 15--20
+\TU/lmr/m/n/12 Jing.  High-performance area-efficient polynomial ring processor
+
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 29--34
 \TU/lmr/m/n/12 accelerated post-quantum cryptography.  \TU/lmr/m/it/12 IEEE Tra
 nsactions on
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 15--20
+Underfull \hbox (badness 1308) in paragraph at lines 29--34
 \TU/lmr/m/it/12 Nanotechnology ( Volume: 21)\TU/lmr/m/n/12 , pages 685 – 691, 2
 022.  doi:
  []
 
-) [4
+) [5
 
 ] (03 LaTex Assignment 2 - Bibliography.aux)
  ***********
@@ -215,12 +241,12 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2180 strings out of 409617
- 34732 string characters out of 5774216
- 1925191 words of memory out of 5000000
- 24290 multiletter control sequences out of 15000+600000
+ 2192 strings out of 409617
+ 34912 string characters out of 5774216
+ 1927191 words of memory out of 5000000
+ 24302 multiletter control sequences out of 15000+600000
  559054 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  57i,6n,65p,676b,189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 03 LaTex Assignment 2 - Bibliography.pdf (5 pages).
+Output written on 03 LaTex Assignment 2 - Bibliography.pdf (6 pages).

@@ -1,0 +1,21 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Basu et~al.(2019)Basu, Soni, Nabeel, and Karri]{paper_2}
+Kanad Basu, Deepraj Soni, Mohammed Nabeel, and Ramesh Karri.
+\newblock {NIST} post-quantum cryptography- a hardware evaluation study.
+\newblock 2019.
+\newblock URL \url{https://eprint.iacr.org/2019/047}.
+
+\bibitem[Li et~al.(2022)Li, Tang, Que, and Zhang]{paper_1}
+He~Li, Yongming Tang, Zhiqiang Que, and Jiliang Zhang.
+\newblock Fpga accelerated post-quantum cryptography.
+\newblock \emph{IEEE Transactions on Nanotechnology ( Volume: 21)}, pages 685
+  -- 691, 2022.
+\newblock \doi{10.1109/TNANO.2022.3217802}.
+
+\end{thebibliography}

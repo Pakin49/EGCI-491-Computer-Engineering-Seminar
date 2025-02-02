@@ -27,38 +27,31 @@
 \begin{document}
 	\bibliographystyle{plainnat.bst}
 	\maketitle
-		
+	
 	\chapter*{\centering Chapter 2 \\  Literature Review}
 	
 	\hspace{\parindent} 
-	Provide a brief description of what this chapter covers. It is typically an outline of a comprehensive literature review for the whole project.  All related papers and previous works should be reviewed. You should summarize the main contributions, techniques used, data, key findings, and research gaps of each paper.
-		
+	This chapter provides a comprehensive review of the literature on FPGA-based implementations of Post-Quantum Cryptography (PQC). It highlights the growing need for quantum-resistant cryptographic solutions due to the vulnerabilities of traditional cryptographic systems like RSA and ECC in the face of quantum computing advancements. The chapter focuses on two major works in this area, exploring their contributions, techniques, data, key findings, and research gaps
+	
 	\setcounter{chapter}{2}
-	\section{Comparison of Deep Learning and the Classical Machine Learning Algorithm for the Malware Detection \cite{paper_1}}
-	This paper proposed a malware-detection comparison  between using Deep Neuron Network (DNN) and using Randon Forest (RF).  
+	\section{ FPGA Accelerated Post-Quantum Cryptography \cite{paper_1}}
+	This paper presents a comprehensive survey on FPGA-based implementations of Post-Quantum Cryptography (PQC), highlighting key advancements, methodologies, and security considerations. With the emergence of quantum computing, traditional cryptographic systems such as RSA and ECC face vulnerabilities, necessitating quantum-resistant alternatives. The National Institute of Standards and Technology (NIST) has progressed into the fourth round of PQC standardization, emphasizing the importance of efficient hardware implementations.
 	
-	Four different feature sets of Malicia data are used for performance evaluation.  
+	FPGA technology has emerged as a promising platform for accelerating PQC algorithms due to its reconfigurability, parallel processing capabilities, and hardware-software co-optimization. This paper surveys state-of-the-art FPGA implementations, focusing on fast arithmetic techniques, architectural optimizations, and open-source PQC hardware projects. Additionally, it discusses algorithm-hardware codesign strategies, which enhance computational efficiency and adaptability.
 	
-	True positive Rate (TPR), True negative Rate (TNR), and Positive Predictive Value (PPV), including Precision and Accuracy (Acc.) were caculated and used for performance comparison. 
+	Experimental evaluations of FPGA-based PQC implementations demonstrate significant improvements in performance and resource utilization compared to general-purpose hardware. Optimized modular arithmetic units, deep pipeline architectures, and memory-efficient designs contribute to lower latency and improved power efficiency. However, challenges such as scalability, security vulnerabilities, and standardization gaps remain key areas for future research.
 	
-	The experiment indicated that RF performs better that DNN.  This may be due to the combination of Auto-Endocoders used for feature extraction and DNN used for feature classification , which is too complex to predict malware using opcode frequency as a feature. 
+	In conclusion, this survey provides a detailed analysis of current FPGA-based PQC implementations, emphasizing both performance optimization and security challenges. The paper aims to inform future research on designing efficient and secure FPGA accelerators for PQC, paving the way for widespread adoption of quantum-resistant cryptographic solutions.
 	
-	The future work is the investigaion of using other machine learning techniques such as RNN, LSTM, and ESN with more advanced feature extraction approaches.
+	\section{NIST Post-Quantum Cryptography – A Hardware Evaluation Study \cite{paper_2}}
+	This paper provides an in-depth evaluation of the hardware performance of NIST’s Post-Quantum Cryptography (PQC) candidates, focusing on both FPGA and ASIC implementations. With the rapid advancements in quantum computing, conventional cryptographic algorithms such as RSA and ECC are becoming increasingly vulnerable, necessitating the development of efficient and secure quantum-resistant alternatives. The National Institute of Standards and Technology (NIST) has been leading the PQC standardization process, and this study critically examines the feasibility of implementing these algorithms in hardware.
 	
-	\newpage
-	\section{Android Malware Detection Using Static Features and Machine Learning \cite{paper_2}}
-	This paper proposed a static feature-based machine learning approach for android malware detection. 
+	The paper evaluates multiple PQC algorithms shortlisted by NIST, including lattice-based, hash-based, code-based, and multivariate cryptosystems. Key performance metrics such as resource utilization, power consumption, latency, and computational throughput are analyzed across different hardware platforms. FPGA implementations are shown to offer significant flexibility, parallel processing capabilities, and adaptability for PQC acceleration, while ASIC-based solutions provide better power efficiency and lower area overhead, making them suitable for energy-constrained environments.
 	
-	A combinatoon of various  static features such as opcode, permissions, and API calls of Android Application Pakage (APK) were used and compared with using a single type of APK. 
+	Experimental results indicate that lattice-based cryptographic schemes, particularly Kyber and Dilithium, achieve a good balance between security and efficiency, with FPGA implementations leveraging optimized arithmetic units and pipelined architectures for enhanced performance. Meanwhile, hash-based and code-based schemes exhibit higher memory and computational demands, posing challenges for real-world deployment. Security concerns, such as potential side-channel attack vulnerabilities, are also discussed, emphasizing the need for additional countermeasures.
 	
-	Several machine lerning technies included Linear Classifier, oosted Trees, Gaussian Naive Bayes, Decision Tree, Random Fores (RF), and Support Vector Machine (SVM) were used for malware detection and comparison. 
+	In conclusion, this study provides a comprehensive comparison of hardware-based PQC implementations, highlighting both strengths and limitations. Future research should focus on optimizing FPGA architectures, improving resource utilization, and integrating countermeasures against physical attacks. This work serves as a reference for researchers and engineers designing secure and efficient cryptographic hardware solutions for the post-quantum era.
 	
-	In this work, data set used were collected from 1) Andriod Malware Dataset (AMD), 2) Kuafu Det Dataset, and Omnidroid Dataset were used.  60\% of them were used for training, and the remaning is for performance testing in terms of True Positive (TP), False Positive (FP), True Negative (TN), and False Negative (FN). 
-	
-	The experiment showed that Gaussin Process, RF, and Decision Tress provided the most promissing results, respectively.
-	
-	The future work is to apply dynamic feature extracted from APK files to filter out clssiified malware as benign.  In addtion, more advanced machine learning methods such as Deep Neuron Network will also be used with better feature selection approaches to excluse redundant and unnecessary featurwes .
-
 	\newpage
 	\bibliography{References}
 	
